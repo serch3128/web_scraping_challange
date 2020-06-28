@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission to mars</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container">
+
+        <div class="jumbotron text-center">
+          <h1>Mission to mars</h1>
+          <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape new data</a></p> 
+
+        <hr>
+
+        <div class="container">
+            <h2 class="font-weight-bolder text-left">Latest news form mars </h2>
+
+            <h4 class="font-weight-normal text-left" > 
+                
+                {{ lastnew.headline }}
+
+            </h4>  
+            
+            
+            <p class="font-weight-normal text-left"> 
+                
+                {{ lastnew.paragraph }}
+
+            </p> 
+        
+        </div>
+
+
+        <div class="row no-gutters  position-relative">
+            <div class="col-md-8 mb-md-0 p-md-4 border ">
+              <h2 class="font-weight-bolder">Latest news form mars </h2>
+              <img src={{ lastnew.url_image }} class="w-100 h-70"  alt="...">
+            </div>
+            <div class="col-md-4 position-static p-4 pl-md-0">
+                <div class="card-body border">
+                    <h5 class="card-title">Current weather on mars</h5>
+                    <p class="card-text">{{ lastnew.tweet }}</p>
+                    <span class="row md-2"></span>
+                    <h5 class="card-title">Current weather on mars</h5>
+                    <table border="1" class="dataframe">  
+                        <thead>     
+                            <tr style="text-align: right;">           
+                                <th></th>      
+                                <th class="text-left">Value</th>   
+                            </tr>  
+                        </thead>  
+                        <tbody>    
+                            <tr>      
+                                <td class="font-weight-light h6">Equatorial Diameter:</td>      
+                                <td class="font-weight-light h6">6,792 km</td>  
+                            </tr>   
+                            
+                            <tr>         
+                                <td class="font-weight-light h6">Polar Diameter:</td>      
+                                <td class="font-weight-light h6">6,752 km</td>    
+                            </tr>    
+                            
+                            <tr>       
+                                <td class="font-weight-light h6">Mass:</td>      
+                                <td class="font-weight-light h6">6.39 × 10^23 kg (0.11 Earths)</td>   
+                            </tr>   
+                            
+                            <tr>       
+                                <td class="font-weight-light h6">Moons:</td>      
+                                <td class="font-weight-light h6">2 (Phobos &amp; Deimos)</td>    
+                            </tr>   
+                            
+                            <tr>        
+                                <td class="font-weight-light h6">Orbit Distance:</td>      
+                                <td class="font-weight-light h6">227,943,824 km (1.38 AU)</td>   
+                            </tr>   
+                            
+                            <tr>       
+                                <td class="font-weight-light h6">Orbit Period:</td>     
+                                <td class="font-weight-light h6">687 days (1.9 years)</td>   
+                            </tr>   
+                            
+                            <tr>          
+                                <td class="font-weight-light h6">Surface Temperature:</td>      
+                                <td class="font-weight-light h6">-87 to -5 °C</td>    
+                            </tr>    
+                            
+                            <tr>         
+                                <td class="font-weight-light h6">First Record:</td>      
+                                <td class="font-weight-light h6">2nd millennium BC</td>   
+                            </tr>    
+                            
+                            <tr>         
+                                <td class="font-weight-light h6">Recorded By:</td>     
+                                <td class="font-weight-light h6">Egyptian astronomers</td>    
+                            </tr>  
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+        <h2 class="font-weight-bolder text-center">Mars Hemisphere</h2>
+
+        <hr>
+
+        <div class="row no-gutters  position-relative">
+
+            <div class="col-md-6 mb-md-0 p-md-4">
+
+                <img src=" {{ lastnew.pictures[0].link }} " width= 300  heigh=300  alt="...">
+                <h2 class="font-weight-bolder">{{lastnew.pictures[0].title}} </h2>
+
+            </div>
+
+            <div class="col-md-6 mb-md-0 p-md-4">
+
+                <img src=" {{ lastnew.pictures[1].link }} " width= 300  heigh=300  alt="...">
+                <h2 class="font-weight-bolder"> {{lastnew.pictures[1].title}} </h2>
+
+            </div>
+
+            <div class="col-md-6 mb-md-0 p-md-4">
+
+                <img src=" {{ lastnew.pictures[2].link }} " width= 300  heigh=300  alt="...">
+                <h2 class="font-weight-bolder"> {{lastnew.pictures[2].title}} </h2>
+
+            </div>
+
+            <div class="col-md-6 mb-md-0 p-md-4">
+
+                <img src=" {{ lastnew.pictures[3].link }} " width= 300  heigh=300  alt="...">
+                <h2 class="font-weight-bolder"> {{lastnew.pictures[3].title}} </h2>
+
+            </div>
+
+        </div>
+
+
+
+        
+
+
+
+
+
+
+
+
+
+            
+        
+
+
+
+
+
+
+
+
+
+    </div>
+    
+</body>
+</html>
